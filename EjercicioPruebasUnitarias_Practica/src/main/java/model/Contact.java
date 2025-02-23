@@ -21,4 +21,8 @@ public class Contact {
     public String getPhone() {
         return phone;
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> feat_ContactBook
