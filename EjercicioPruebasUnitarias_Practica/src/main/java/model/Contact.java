@@ -15,14 +15,17 @@ public class Contact {
     public String getName() {
         return name;
     }
+
     public String getEmail() {
         return email;
     }
+
     public String getPhone() {
         return phone;
     }
-<<<<<<< HEAD
+
+    @Override
+    public String toString() {
+        return "Email: " + email + "\n" + "Nombre: "+ name + "\n" + "Numero telefonico: "+ phone;
+    }
 }
-=======
-}
->>>>>>> feat_ContactBook

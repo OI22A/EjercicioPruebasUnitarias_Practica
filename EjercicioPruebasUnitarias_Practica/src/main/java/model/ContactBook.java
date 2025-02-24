@@ -25,25 +25,28 @@ public class ContactBook {
         return true;
     }
 
-    public Contact search(String email) {
+    public String search(String email) {
         for (Contact contact : contactList) {
             if (contact.getEmail().equals(email)) {
-                return contact;
+                return contact.toString();
             }
         }
         return null;
     }
 
-    public Contact remove(String name, String email, String phone) {
+    public String remove(String email) {
         Contact toRemove = null;
+        String msg= "";
+
         for (Contact contact : contactList) {
             if (contact.getEmail().equals(email)) {
                 toRemove = contact;
-                break;
             }
+
             if (toRemove != null) {
                 contactList.remove(toRemove);
-                return toRemove;
+                msg += "El contacto ha sido eliminado\n"+toRemove;
+                return msg;
             }
 
         }
